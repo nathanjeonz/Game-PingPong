@@ -47,27 +47,22 @@ def game_loop():
     if b.xcor() > 800 or b.xcor() < -800:
         print("Game Over")
         return
-    
-    
-    for brick in bg.bricks:
-        if b.distance(brick) < 50: 
-            brick.hideturtle()
-            bg.bricks.remove(brick)
-            b.reverse_y()
     screen.update()
     ontimer(game_loop, 8)  # Run approx 60 FPS
 
 # Start game loop
 game_loop()
-
-          
-
-
-
-
-
-
-
-
-
 screen.mainloop()
+
+
+
+
+
+
+
+
+
+turtle.mainloop()
+
+
+

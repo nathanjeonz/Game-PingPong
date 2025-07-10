@@ -15,9 +15,11 @@ class BrickGroup():
                 t.color(random.choice(colors))
                 t.goto(i,j)
                 self.bricks.append(t)
-    def destroy(self,index):
-        self.bricks[index].hideturtle()
-        del self.bricks[index]
+
+    def destroy(self, brick):
+        if brick in self.bricks:
+            brick.hideturtle()
+            self.bricks.remove(brick)
 
 
         
